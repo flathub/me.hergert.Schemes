@@ -1,16 +1,16 @@
 {
-    "app-id" : "me.hergert.Schemes",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "schemes",
-    "finish-args" : [
+    "app-id": "me.hergert.Schemes",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "44",
+    "sdk": "org.gnome.Sdk",
+    "command": "schemes",
+    "finish-args": [
         "--share=ipc",
         "--socket=fallback-x11",
         "--device=dri",
         "--socket=wayland"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -20,20 +20,20 @@
         "/share/man",
         "/share/pkgconfig"
     ],
-    "modules" : [
+    "modules": [
         {
-            "name" : "libpanel",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libpanel",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Ddocs=disabled",
                 "-Dintrospection=disabled",
                 "-Dvapi=false"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/libpanel/1.2/libpanel-1.2.0.tar.xz",
-                    "sha256" : "d9055bbbab9625f3f5ce6d1fd7132eb6ea34a6ba07a87e9938901fb8b31581e2",
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libpanel/1.6/libpanel-1.6.0.tar.xz",
+                    "sha256": "b773494a3c69300345cd8e27027448d1189183026cc137802f886417c6ea30b6",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libpanel",
@@ -43,16 +43,16 @@
             ]
         },
         {
-            "name" : "schemes",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "schemes",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Ddevelopment=false"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/chergert/schemes.git",
-                    "commit" : "ede21dae6b28591bd9312f98f5899968de1f7277"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/chergert/schemes.git",
+                    "commit": "ede21dae6b28591bd9312f98f5899968de1f7277"
                 }
             ]
         }
